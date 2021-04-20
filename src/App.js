@@ -18,7 +18,7 @@ class App extends Component {
       headers: {
         'Content-Type': 'aplication/json'
       }
-    })
+    }).then(response => console.log(response))
   }
   
   render() {
