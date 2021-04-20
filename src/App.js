@@ -13,7 +13,12 @@ class App extends Component {
   }
   
   componentDidMount() {
-    
+    fetch('http://api.open-notify.org/astros.json', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'aplication/json'
+      }
+    })
   }
   
   render() {
