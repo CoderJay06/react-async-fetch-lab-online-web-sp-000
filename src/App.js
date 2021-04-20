@@ -18,11 +18,11 @@ class App extends Component {
       headers: {
         'Content-Type': 'aplication/json'
       }
-    }).then(response => console.log(response))
+    }).then(response => response.json())
+      .then(astrosData => this.setState({ astros: astrosData }));
   }
   
   render() {
-    
       <div>
         {this.state.astros}
       </div>
