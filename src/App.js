@@ -3,34 +3,23 @@
 // Write a componentDidMount method. Inside the method, 
 // send a fetch request to http://api.open-notify.org/astros.json, 
 // a free API that returns a list of people currently in space.
-import React from 'react';
+import React, { Component } from 'react';
 
-class App extends React.Component {
-
-   render() {
-      return (
-         <div className='container'>
-            <h2>People in space</h2>
-            <ul className='people-in-space'>
-            </ul>
-         </div>
-      )
-   }
-
-   componentDidMount() {
-      fetch('http://api.open-notify.org/astros.json')
-         .then(res => res.json()) 
-         .then(data => {
-            const spacePeopleList = document.querySelector('.people-in-space');
-            data.people.forEach(person => {
-               spacePeopleList.innerHTML += 
-                  `
-                  <li>${person.name}</li>
-                  `
-            });
-         })
-   }
+class App extends Component {
+  constructor() {
+    this.state = {
+      astros: []
+    };
+  }
+  
+  componentDidMount() {
+    
+  }
+  
+  render() {
+    
+      <div>
+        {this.state.astros}
+      </div>
+  }
 }
-
-
-export default App;
